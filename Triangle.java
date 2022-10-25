@@ -1,7 +1,7 @@
 package Architecture.Geometria;
 
 
-public class Triangle extends Figure{
+public class Triangle extends Figure {
 
     public Double sideA;
     public Double sideB;
@@ -24,8 +24,7 @@ public class Triangle extends Figure{
     @Override
     public Double calculatePerimeter() {
         return sideA + sideB + sideC;
-    }   
+    }  
 
-    
     
 }

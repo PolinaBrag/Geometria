@@ -1,11 +1,11 @@
 package Architecture.Geometria;
 
-public class Square extends Figure {
-    
+public class Square extends Rectangle {
+   
     public Double side;
 
     public Square(String nameOfFigure, Double side) {
-        super(nameOfFigure);
+        super(nameOfFigure, side, side);
         this.side = side;
     }
 

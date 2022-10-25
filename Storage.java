@@ -1,7 +1,7 @@
 package Architecture.Geometria;
 import java.util.ArrayList;
 
-public class Storage implements CalcAreaAllFigures, CalcPerimeterAllFigures, AddFigureInStorage, Printer {
+public class Storage implements AddFigureInStorage, Printer {
 
     ArrayList<Figure> figures = new ArrayList<Figure>();
 
@@ -12,14 +12,17 @@ public class Storage implements CalcAreaAllFigures, CalcPerimeterAllFigures, Add
         }
     }
 
-    @Override
     public void calculatePerimeterAllFigures() {
         for (Figure fgr : figures) {
-            System.out.println("Периметр фигуры " + fgr.getNameOfFigure() + " равен " + fgr.calculatePerimeter() + " см");
+            if (!fgr.getNameOfFigure().contains("круг")){
+                System.out.println("Периметр фигуры " + fgr.getNameOfFigure() + " равен " + fgr.calculatePerimeter() + " см");
+            }
+            else{
+                System.out.println("Длина окружности круга равна " + ((Circle)(fgr)).calculateCircumference() + " см");
+            }
         }
     }
 
-    @Override
     public void calculateAreaAllFigures() {
         for (Figure fgr : figures) {
             System.out.println("Площадь фигуры " + fgr.getNameOfFigure() + " равна " + fgr.calculateArea() + " см^2");

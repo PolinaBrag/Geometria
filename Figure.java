@@ -1,6 +1,6 @@
 package Architecture.Geometria;
 
-public abstract class Figure{
+public abstract class Figure implements CalcArea, CalcPerimeter {
     
     private String nameOfFigure;
 
@@ -12,13 +12,14 @@ public abstract class Figure{
         return nameOfFigure;
     }
 
-    public Double calculatePerimeter() {
-        return null;
-    }
-
+    @Override
     public Double calculateArea() {
         return null;
     }
 
+    @Override
+    public Double calculatePerimeter() {
+        return null;
+    }
 
 }

@@ -1,6 +1,6 @@
 package Architecture.Geometria;
 
-public class Circle extends Figure{
+public class Circle extends Figure implements CalcCircumference {
     
     public Double radius;
 
@@ -12,12 +12,13 @@ public class Circle extends Figure{
     @Override
     public Double calculateArea() {
         return Math.PI * Math.pow(radius, 2);
+        
     }
 
     @Override
-    public Double calculatePerimeter() {
-        return 2 * radius * Math.PI ;
+    public Double calculateCircumference() {
+        return 2 * radius * Math.PI;
+        
     }
-
 
 }
