@@ -14,14 +14,21 @@ public class Storage implements AddFigureInStorage, Printer {
 
     public void calculatePerimeterAllFigures() {
         for (Figure fgr : figures) {
-            if (!fgr.getNameOfFigure().contains("круг")){
-                System.out.println("Периметр фигуры " + fgr.getNameOfFigure() + " равен " + fgr.calculatePerimeter() + " см");
+            if (fgr.getNameOfFigure().contains("прямоугольник")){
+                System.out.println("Периметр прямоугольника равен " + ((Rectangle)(fgr)).calculatePerimeter() + " см");
             }
-            else{
+            if (fgr.getNameOfFigure().contains("квадрат")){
+                System.out.println("Периметр квадрата равен " + ((Square)(fgr)).calculatePerimeter() + " см");
+            }
+            if (fgr.getNameOfFigure().contains("треугольник")){
+                System.out.println("Периметр треугольника равен " + ((Triangle)(fgr)).calculatePerimeter() + " см");
+            }
+            if (fgr.getNameOfFigure().contains("круг")){
                 System.out.println("Длина окружности круга равна " + ((Circle)(fgr)).calculateCircumference() + " см");
             }
         }
     }
+    
 
     public void calculateAreaAllFigures() {
         for (Figure fgr : figures) {

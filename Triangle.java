@@ -1,7 +1,7 @@
 package Architecture.Geometria;
 
 
-public class Triangle extends Figure {
+public class Triangle extends Figure implements CalcPerimeter{
 
     public Double sideA;
     public Double sideB;

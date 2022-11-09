@@ -1,6 +1,6 @@
 package Architecture.Geometria;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements CalcPerimeter {
     
     public Double width;
     public Double length;
